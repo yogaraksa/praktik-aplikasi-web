@@ -1,0 +1,113 @@
+<!DOCTYPE html><html lang="id"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><title>EduSync – Prototipe Klik (Pertemuan 3)</title>
+<style>
+:root{box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);--bg:#f6f7fb;--card:#fff;--ink:#1c2230;--mut:#5d6678;--line:#d5d9e4;--ac:#1f4fd8;--acl:#e6edff;--err:#b42318;--errbg:#fdecea;--warn:#b54708;--warnbg:#fff7e6;--ok:#1e7e34}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#12151d;--card:#1b1f2a;--ink:#eef1f8;--mut:#a6aec2;--line:#343b4d;--ac:#7c9cff;--acl:#22305f;--err:#ff8a7a;--errbg:#3a1d1a;--warn:#ffb266;--warnbg:#3a2a12;--ok:#6fd98a}}
+:root[data-theme="dark"]{--bg:#12151d;--card:#1b1f2a;--ink:#eef1f8;--mut:#a6aec2;--line:#343b4d;--ac:#7c9cff;--acl:#22305f;--err:#ff8a7a;--errbg:#3a1d1a;--warn:#ffb266;--warnbg:#3a2a12;--ok:#6fd98a}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.45 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;min-height:100vh}
+button,input,select,textarea{font:inherit;color:inherit}button{cursor:pointer}
+.top{display:flex;align-items:center;gap:18px;background:var(--card);border-bottom:1px solid var(--line);padding:0 20px;height:58px;position:sticky;top:env(safe-area-inset-top,0px);z-index:5}
+.logo{font-weight:800;color:var(--ac);font-size:20px}.top nav{display:flex;gap:4px;flex:1;overflow-x:auto}
+.nb{background:none;border:0;padding:17px 10px;color:var(--mut);border-bottom:3px solid transparent;white-space:nowrap}.nb.on{color:var(--ink);font-weight:700;border-color:var(--ac)}
+.pill{background:var(--bg);border:1px solid var(--line);border-radius:99px;padding:3px 10px;font-size:12px;font-weight:600;white-space:nowrap}
+.wrap{max-width:1180px;margin:0 auto;padding:20px}h1{margin:0;font-size:26px}.sub{color:var(--mut);margin:2px 0 14px;font-size:13px}
+.bar{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-bottom:14px}.grow{flex:1}
+.btn{border:1px solid var(--line);background:var(--card);border-radius:8px;padding:9px 16px;font-weight:600}.btn.p{background:var(--ac);border-color:var(--ac);color:#fff}.btn.p{color:#fff}
+:root[data-theme="dark"] .btn.p,@media (prefers-color-scheme:dark){}
+.layout{display:grid;grid-template-columns:1fr 310px;gap:16px}
+.week{display:grid;grid-template-columns:repeat(6,1fr);gap:8px}
+.day{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:8px;min-height:230px}.day h3{margin:0 0 8px;font-size:13px}.day.today{border-color:var(--ac);box-shadow:0 0 0 1px var(--ac)}
+.cls{border:1px solid var(--line);background:var(--bg);border-radius:8px;padding:8px;margin-bottom:6px;cursor:pointer;width:100%;text-align:left;display:block}
+.cls b{display:block;font-size:13px}.cls small{color:var(--mut);font-size:12px}
+.cls.ov{background:var(--acl);border:2px dashed var(--ac)}.cls.gone{border-style:dashed;background:none;color:var(--mut);cursor:default;font-size:12px}
+.badge{display:inline-block;background:var(--ac);color:#fff;font-size:10px;font-weight:800;border-radius:9px;padding:1px 8px;margin-bottom:4px}:root[data-theme="dark"] .badge{color:#0d1330}
+.task{display:flex;gap:8px;align-items:flex-start;background:var(--card);border:1px solid var(--line);border-radius:8px;padding:8px;margin-bottom:6px}
+.task input{width:22px;height:22px;flex:none;margin:1px 0 0}.task.done{background:var(--bg);opacity:.6}.task.done b{text-decoration:line-through}.task b{font-size:13px;display:block}.task small{color:var(--mut);font-size:12px}
+.panel{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:14px;height:fit-content}.panel h2{margin:0 0 2px;font-size:16px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:22px;max-width:480px;margin:32px auto}
+.hero{max-width:900px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:30px;align-items:center;padding:20px}.hero h1{font-size:38px;line-height:1.15}
+label{display:block;font-weight:700;font-size:13px;margin:12px 0 4px}input[type=text],input[type=email],input[type=date],input[type=time],select,textarea{width:100%;padding:10px 12px;border:1px solid var(--line);border-radius:8px;background:var(--bg)}
+.er{border:2px solid var(--err)!important}.em{color:var(--err);font-weight:700;font-size:12.5px;margin-top:4px}.hint{color:var(--mut);font-size:12px;margin-top:3px}
+.row2{display:grid;grid-template-columns:1fr 1fr;gap:10px}.chkl{display:flex;gap:8px;align-items:center;font-weight:600;margin-top:14px}.chkl input{width:22px;height:22px}
+.ov-bg{position:fixed;inset:0;background:rgba(0,0,0,.5);display:flex;align-items:center;justify-content:center;z-index:10;padding:16px}
+.modal{background:var(--card);border:2px solid var(--ac);border-radius:14px;padding:22px;width:100%;max-width:480px;max-height:92vh;overflow:auto}.modal.w{border-color:var(--warn)}.modal h2{margin:0 0 6px}
+.kv{display:grid;grid-template-columns:110px 1fr;gap:8px;padding:8px 0;border-bottom:1px solid var(--line);font-size:14px}.kv span{color:var(--mut);font-weight:700}
+.acts{display:flex;gap:8px;justify-content:flex-end;margin-top:16px;flex-wrap:wrap}
+.toast{position:fixed;left:50%;transform:translateX(-50%);bottom:calc(76px + env(safe-area-inset-bottom,0px));background:var(--ink);color:var(--bg);padding:10px 16px;border-radius:10px;font-weight:600;z-index:20;max-width:92vw}
+.toast.e{background:var(--err);color:#fff}.empty{border:2px dashed var(--line);border-radius:12px;padding:30px;text-align:center;background:var(--card)}
+.demo{position:fixed;left:0;right:0;bottom:0;background:var(--card);border-top:1px solid var(--line);padding:8px 14px calc(8px + env(safe-area-inset-bottom,0px));display:flex;gap:14px;flex-wrap:wrap;align-items:center;font-size:12.5px;z-index:4}.demo b{color:var(--ac)}.demo button{padding:4px 10px;font-size:12px}
+.code403{font-size:64px;font-weight:800;color:var(--mut);text-align:center}.fab{display:none}
+.views{display:flex;border:1px solid var(--line);border-radius:99px;overflow:hidden}.views button{border:0;background:none;padding:7px 14px;font-weight:600}.views .on{background:var(--ac);color:#fff}
+@media (max-width:820px){.layout{grid-template-columns:1fr}.week{grid-template-columns:1fr}.day{min-height:0}.hero{grid-template-columns:1fr}.hero h1{font-size:28px}.top{padding:0 10px;gap:8px}.wrap{padding:14px;padding-bottom:110px}.hidem{display:none}.btn,.nb,.chkl{min-height:44px}.modal{align-self:flex-end;border-radius:18px 18px 0 0}.ov-bg{align-items:flex-end;padding:0}.fab{display:block;position:fixed;right:16px;bottom:calc(90px + env(safe-area-inset-bottom,0px));width:56px;height:56px;border-radius:50%;background:var(--ac);color:#fff;font-size:30px;border:0;z-index:4}}
+</style></head><body>
+<div id="app"></div><div id="ov"></div><div id="toast"></div>
+<div class="demo"><b>Mode demo</b><span>Peran: <button class="btn" onclick="S.role=S.role=='komti'?'mhs':'komti';S.user&&go('cal');draw()" id="rb"></button></span><label style="margin:0;display:flex;gap:6px;align-items:center;font-weight:600"><input type="checkbox" id="net" onchange="S.fail=this.checked"> Simulasikan jaringan galat</label><button class="btn" onclick="S.user?go('kelola'):toast('Masuk dulu.',1)">Buka URL /kelola</button><button class="btn" onclick="reset()">Reset data</button></div>
+<script>
+const KLS='TIJ-2024',KOM='KOMTI-24',TODAY='2026-10-07',DN=['Senin','Selasa','Rabu','Kamis','Jumat','Sabtu'],DT=['2026-10-05','2026-10-06','2026-10-07','2026-10-08','2026-10-09','2026-10-10'];
+const fmt=d=>{const i=DT.indexOf(d);if(i>=0)return DN[i]+' '+(5+i)+' Okt';const x=new Date(d+'T00:00');return x.toLocaleDateString('id-ID',{weekday:'long',day:'numeric',month:'short'})};
+let S,ST=()=>({user:null,role:'mhs',fail:false,view:'Agenda',
+reg:[{id:'c1',n:'Praktik Aplikasi Web',d:0,t:'07:00',e:'09:30',r:'Lab 2'},{id:'c2',n:'Komputasi Awan',d:1,t:'13:00',e:'14:40',r:'R.105'},{id:'c3',n:'Jaringan Komputer',d:2,t:'09:40',e:'11:20',r:'R.204'},{id:'c4',n:'Keamanan Siber',d:3,t:'10:00',e:'11:40',r:'R.301'},{id:'c5',n:'Probabilitas dan Statistika',d:4,t:'08:00',e:'09:40',r:'R.210'}],
+ov:[{cid:'c3',date:'2026-10-07',t:'13:00',e:'14:40',r:'Lab 3',why:'Dosen dinas luar; kuliah digeser ke siang.',by:'Komti TI-J 2024 · 5 Okt 08:15'}],
+tasks:[{id:1,n:'Kuis Awan',m:'Komputasi Awan',date:'2026-10-06',t:'10:00',done:true},{id:2,n:'Ringkasan Jurnal',m:'Keamanan Siber',date:'2026-10-08',t:'12:00',done:false},{id:3,n:'Laporan Praktikum Web',m:'Praktik Aplikasi Web',date:'2026-10-09',t:'23:59',done:false}]});
+S=ST();let page='login',err={},form={},modal=null,empty=false;
+const $=s=>document.querySelector(s),h=(s)=>s.replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+function toast(m,e){const t=$('#toast');t.innerHTML=`<div class="toast ${e?'e':''}">${h(m)}</div>`;clearTimeout(window._t);window._t=setTimeout(()=>t.innerHTML='',3200)}
+function go(p){if(p=='kelola'&&S.role!='komti'){page='403'}else page=p;err={};modal=null;draw();scrollTo(0,0)}
+function reset(){S=ST();page='login';err={};form={};modal=null;empty=false;draw()}
+function nav(){const it=[['cal','Kalender'],['soon','Tugas Saya'],...(S.role=='komti'?[['kelola','Kelola Kuliah Pengganti']]:[]),['soon','Bantuan']];
+return `<header class="top"><span class="logo">EduSync</span><nav>${it.map(([k,l])=>`<button class="nb ${page==k?'on':''}" onclick="${k=='soon'?`toast('${l}: di luar ruang lingkup Pertemuan 3',0)`:`go('${k}')`}">${l}</button>`).join('')}</nav><span class="pill">TI-J 2024</span><span class="pill hidem">${S.role=='komti'?'Komti':'Mahasiswa'}</span></header>`}
+// ---------- LOGIN
+function login(){return `<div class="hero"><div><h1>Semua jadwal kuliah dan tugas kelas, di satu kalender.</h1><p class="sub">Kuliah pengganti tidak lagi tenggelam di grup chat.</p></div><div class="card" style="margin:0"><h2 style="margin:0">Masuk ke EduSync</h2>
+<label for="em">Email kampus</label><input id="em" type="email" value="${h(form.em??'24051130045@student.uny.ac.id')}"><label for="kc">Kode kelas</label><input id="kc" type="text" class="${err.kc?'er':''}" value="${h(form.kc??'')}" placeholder="Contoh: ${KLS}">${err.kc?`<div class="em">! ${err.kc}</div>`:`<div class="hint">Demo: ${KLS}</div>`}
+<label class="chkl"><input type="checkbox" id="ik" ${form.ik?'checked':''} onchange="form.ik=this.checked;form.em=$('#em').value;form.kc=$('#kc').value;draw()"> Saya Komti / PJ mata kuliah</label>
+${form.ik?`<label for="vk">Kode verifikasi Komti</label><input id="vk" type="text" class="${err.vk?'er':''}" value="${h(form.vk??'')}">${err.vk?`<div class="em">! ${err.vk}</div>`:`<div class="hint">Kode diberikan dosen pengampu / program studi. Demo: ${KOM}</div>`}`:''}
+<div class="acts"><button class="btn p" style="width:100%;padding:13px" onclick="doLogin()">Masuk</button></div><p class="hint">Belum punya kode kelas? Minta ke Komti kelasmu.</p></div></div>`}
+function doLogin(){form.em=$('#em').value;form.kc=$('#kc').value.trim();form.vk=$('#vk')?.value.trim();err={};
+if(form.kc.toUpperCase()!=KLS)err.kc='Kode kelas tidak ditemukan. Periksa huruf dan angka.';
+else if(form.ik&&form.vk!=KOM){err.vk='Kode verifikasi tidak cocok. Kamu bisa masuk sebagai mahasiswa dengan menghapus centang Komti.'}
+if(err.kc||err.vk)return draw();S.user=form.em;S.role=form.ik?'komti':'mhs';go('cal')}
+// ---------- CALENDAR
+function slot(i){const out=[];S.reg.filter(c=>c.d==i).forEach(c=>{const o=S.ov.find(o=>o.cid==c.id&&DT.includes(o.date)&&DT.indexOf(o.date)>=0&&DT[i]==DT[c.d]&&true);
+const moved=S.ov.find(o=>o.cid==c.id&&o.origDate==DT[i])||S.ov.find(o=>o.cid==c.id&&!o.origDate&&DT[i]==DT[c.d]);
+if(moved&&moved.date!=DT[i])out.push(`<div class="cls gone">slot semula (kosong)<br><small>${c.n}</small></div>`);else if(moved)out.push(ovCard(moved,c));else out.push(`<button class="cls" onclick="openCls('${c.id}',${i})"><b>${c.n}</b><small>${c.t} · ${c.r}</small></button>`)});
+S.ov.filter(o=>o.date==DT[i]&&DT.indexOf(o.date)!=-1).forEach(o=>{const c=S.reg.find(c=>c.id==o.cid);if(c.d!=i)out.push(ovCard(o,c))});return out.join('')}
+const ovCard=(o,c)=>`<button class="cls ov" onclick="openOv('${o.cid}','${o.date}')"><span class="badge">⇄ PENGGANTI</span><b>${c.n}</b><small>${o.t} · ${o.r}<br>semula ${c.t} · ${c.r}</small></button>`;
+const taskRow=t=>`<label class="task ${t.done?'done':''}"><input type="checkbox" ${t.done?'checked':''} onchange="toggle(${t.id},this)" aria-label="Selesai: ${h(t.n)}"><span><b>${h(t.n)}</b><small>${h(t.m)} · ${fmt(t.date)} ${t.t}</small></span></label>`;
+function cal(){const nd=S.tasks.filter(t=>t.done).length;
+return `<div class="wrap"><div class="bar"><div><h1>Jadwal Minggu Ini</h1><div class="sub" style="margin:0">5–10 Okt 2026 · TI-J 2024</div></div><span class="grow"></span><div class="views hidem">${['Agenda','Minggu','Bulan'].map(v=>`<button class="${S.view==v?'on':''}" onclick="S.view='${v}';${v=='Bulan'?`toast('Tampilan Bulan belum dibuat (di luar ruang lingkup)',0)`:'draw()'}">${v}</button>`).join('')}</div><button class="btn p hidem" onclick="openTask()">+ Tambah Tugas</button></div>
+<div class="layout"><div>${empty?`<div class="empty"><h2>Belum ada jadwal untuk minggu ini</h2><p class="sub">Jadwal rutin diisi oleh Komti kelas. Sementara itu, kamu tetap bisa menambahkan tugas.</p><button class="btn p" onclick="openTask()">+ Tambah Tugas</button></div>`:`<div class="week">${DT.map((d,i)=>`<section class="day ${d==TODAY?'today':''}"><h3>${DN[i]} ${5+i} Okt${d==TODAY?' · hari ini':''}</h3>${slot(i)}${S.tasks.filter(t=>t.date==d).map(t=>`<div class="hint" style="margin:2px 0">Tenggat ${t.t}: ${h(t.n)}${t.done?' ✓':''}</div>`).join('')}</section>`).join('')}</div>`}<p class="hint"><button class="btn" style="padding:4px 10px;font-size:12px" onclick="empty=!empty;draw()">Demo: ${empty?'tampilkan jadwal':'tampilkan state kosong'}</button></p></div>
+<aside class="panel"><h2>Tugas Minggu Ini</h2><div class="sub">${S.tasks.length} tugas · ${nd} selesai</div>${S.tasks.slice().sort((a,b)=>(a.date+a.t).localeCompare(b.date+b.t)).map(taskRow).join('')||'<div class="empty">Belum ada tugas. Ketuk + Tambah Tugas.</div>'}</aside></div></div><button class="fab" onclick="openTask()" aria-label="Tambah tugas">+</button>`}
+function toggle(id,el){const t=S.tasks.find(x=>x.id==id);if(S.fail){el.checked=t.done;return toast('Gagal tersimpan, coba lagi. Status tugas dikembalikan.',1)}t.done=!t.done;draw()}
+function openCls(cid,i){const c=S.reg.find(x=>x.id==cid);modal=`<h2>${c.n}</h2><div class="kv"><span>Hari</span>${DN[i]}</div><div class="kv"><span>Jam</span>${c.t} – ${c.e}</div><div class="kv"><span>Ruang</span>${c.r}</div><div class="acts"><button class="btn p" onclick="closeM()">Tutup</button></div>`;draw()}
+function openOv(cid,date){const o=S.ov.find(x=>x.cid==cid&&x.date==date),c=S.reg.find(x=>x.id==cid);modal=`<h2>${c.n}</h2><span class="badge">⇄ KULIAH PENGGANTI</span><div class="kv"><span>Tanggal</span>${fmt(date)} 2026</div><div class="kv"><span>Jam baru</span>${o.t} – ${o.e}</div><div class="kv"><span>Ruang baru</span>${o.r}</div><div class="kv"><span>Semula</span>${c.t} – ${c.e} · ${c.r}</div><div class="kv"><span>Alasan</span>${h(o.why)}</div><div class="kv"><span>Diumumkan</span>${h(o.by)}</div><div class="acts"><button class="btn p" onclick="closeM()">Tutup</button></div>`;draw()}
+const closeM=()=>{modal=null;draw()};
+// ---------- TASK
+function openTask(f){form.task=f||{n:'',m:'Praktik Aplikasi Web',date:'',t:'23:59',note:''};err={};modal='task';draw()}
+function taskModal(){const f=form.task;return `<h2>Tambah Tugas</h2><label for="tn">Judul tugas *</label><input id="tn" type="text" class="${err.n?'er':''}" value="${h(f.n)}">${err.n?`<div class="em">! ${err.n}</div>`:''}
+<label for="tm">Mata kuliah *</label><select id="tm">${S.reg.map(c=>`<option ${f.m==c.n?'selected':''}>${c.n}</option>`).join('')}</select>
+<div class="row2"><div><label for="td">Tanggal tenggat *</label><input id="td" type="date" class="${err.d?'er':''}" value="${f.date}">${err.d?`<div class="em">! ${err.d}</div>`:''}</div><div><label for="tt">Jam tenggat *</label><input id="tt" type="time" value="${f.t}"></div></div>
+<label for="tc">Catatan (opsional)</label><textarea id="tc" rows="2">${h(f.note)}</textarea><div class="acts"><button class="btn" onclick="closeM()">Batal</button><button class="btn p" onclick="saveTask(false)">Simpan Tugas</button></div>`}
+function saveTask(force){const f=force?form.task:(form.task={n:$('#tn').value.trim(),m:$('#tm').value,date:$('#td').value,t:$('#tt').value||'23:59',note:$('#tc').value});err={};
+if(!f.n)err.n='Judul tugas wajib diisi';if(!f.date)err.d='Tanggal tenggat wajib diisi';if(err.n||err.d)return draw();
+if(f.date<TODAY&&!force){modal='past';return draw()}
+S.tasks.push({id:Date.now(),n:f.n,m:f.m,date:f.date,t:f.t,done:false});modal=null;draw();toast('Tugas tersimpan: '+f.n)}
+// ---------- KELOLA
+function kelola(){const f=form.k||(form.k={c:'c3',date:'2026-10-08',t:'13:00',e:'14:40',r:'Lab 3',why:''});const c=S.reg.find(x=>x.id==f.c);
+return `<div class="wrap"><h1>Kelola Kuliah Pengganti</h1><p class="sub">Hanya Komti. Perubahan langsung terlihat di kalender seluruh anggota kelas.</p><div class="layout"><div class="panel"><label for="kc2">Mata kuliah *</label><select id="kc2" onchange="kSync();draw()">${S.reg.map(x=>`<option value="${x.id}" ${f.c==x.id?'selected':''}>${x.n}</option>`).join('')}</select><div class="hint">Jadwal semula: ${DN[c.d]} ${c.t}–${c.e} · ${c.r} (otomatis)</div>
+<div class="row2"><div><label for="kd">Tanggal baru *</label><input id="kd" type="date" class="${err.d?'er':''}" value="${f.date}">${err.d?`<div class="em">! ${err.d}</div>`:''}</div><div><label for="kr">Ruang baru *</label><input id="kr" type="text" class="${err.r?'er':''}" value="${h(f.r)}">${err.r?`<div class="em">! ${err.r}</div>`:''}</div></div>
+<div class="row2"><div><label for="kt">Jam mulai *</label><input id="kt" type="time" value="${f.t}"></div><div><label for="ke">Jam selesai *</label><input id="ke" type="time" value="${f.e}"></div></div>
+<label for="kw">Alasan (tampil ke mahasiswa) *</label><textarea id="kw" rows="2" class="${err.w?'er':''}">${h(f.why)}</textarea>${err.w?`<div class="em">! ${err.w}</div>`:''}
+<div class="acts"><button class="btn" onclick="go('cal')">Batal</button><button class="btn p" onclick="pubK(false)">Publikasikan Kuliah Pengganti</button></div></div>
+<aside class="panel"><h2>Pratinjau di kalender anggota</h2><div class="sub">Slot semula kosong, slot baru berlabel.</div><div class="cls ov" style="cursor:default"><span class="badge">⇄ PENGGANTI</span><b>${c.n}</b><small>${fmt(f.date)} · ${f.t} · ${h(f.r||'—')}</small></div><p class="hint">Jadwal rutin mingguan tidak berubah. Contoh tanggal libur akademik: Jumat 9 Okt 2026.</p></aside></div></div>`}
+function kSync(){const f=form.k;f.c=$('#kc2').value;f.date=$('#kd').value;f.r=$('#kr').value;f.t=$('#kt').value;f.e=$('#ke').value;f.why=$('#kw').value}
+function pubK(force){kSync();const f=form.k;err={};if(!f.date)err.d='Tanggal baru wajib diisi';if(!f.r.trim())err.r='Ruang baru wajib diisi';if(!f.why.trim())err.w='Alasan wajib diisi';if(Object.keys(err).length)return draw();
+if(f.date=='2026-10-09'&&!force){modal='libur';return draw()}
+S.ov=S.ov.filter(o=>o.cid!=f.c);S.ov.push({cid:f.c,date:f.date,t:f.t,e:f.e,r:f.r,why:f.why,by:'Komti TI-J 2024 · baru saja'});form.k=null;go('cal');toast('Kuliah pengganti terbit. Terlihat oleh seluruh anggota kelas.')}
+function forbid(){return `<div class="card" style="text-align:center;max-width:560px"><div class="code403">403</div><h2>Halaman ini khusus Komti</h2><p class="sub">Akunmu terdaftar sebagai mahasiswa. Minta Komti kelas untuk mengubah jadwal.</p><button class="btn p" style="padding:12px 22px" onclick="go('cal')">Kembali ke Kalender</button></div>`}
+// ---------- DRAW
+function mod(){if(!modal)return'';const b=modal=='task'?taskModal():modal=='past'?`<h2>Tanggal tenggat sudah lewat</h2><p>${fmt(form.task.date)} lebih awal dari hari ini (Rabu 7 Okt). Tetap simpan tugas ini?</p><div class="acts"><button class="btn" onclick="modal='task';draw()">Ubah tanggal</button><button class="btn p" onclick="saveTask(true)">Tetap simpan</button></div>`:modal=='libur'?`<h2>Tanggal ini ditandai libur</h2><p>Jumat, 9 Okt 2026 tercatat libur akademik (contoh). Mahasiswa akan menerima jadwal pada hari libur. Lanjutkan?</p><div class="acts"><button class="btn" onclick="closeM()">Ubah tanggal</button><button class="btn p" onclick="modal=null;pubK(true)">Tetap jadwalkan</button></div>`:modal;
+return `<div class="ov-bg" onclick="if(event.target==this)closeM()"><div class="modal ${modal=='past'||modal=='libur'?'w':''}" role="dialog" aria-modal="true">${b}</div></div>`}
+function draw(){$('#rb').textContent=S.role=='komti'?'Komti':'Mahasiswa';
+$('#app').innerHTML=page=='login'?login():nav()+(page=='cal'?cal():page=='kelola'?kelola():forbid());$('#ov').innerHTML=mod()}
+draw();
+</script></body></html>

@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+
+<html lang="id"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><title>EduSync</title><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "tertiary-fixed-dim": "#68dba9", "on-background": "#0b1c30", "secondary": "#565e74", "error": "#ba1a1a", "secondary-fixed": "#dae2fd", "error-container": "#ffdad6", "on-secondary-fixed": "#131b2e", "on-primary-fixed-variant": "#0039b5", "on-secondary-container": "#5c647a", "primary-container": "#1f4fd8", "primary-fixed-dim": "#b7c4ff", "on-surface": "#0b1c30", "surface-dim": "#cbdbf5", "surface-container-lowest": "#ffffff", "on-error-container": "#93000a", "tertiary-fixed": "#85f8c4", "on-secondary-fixed-variant": "#3f465c", "on-tertiary-fixed-variant": "#005137", "on-primary-fixed": "#001551", "on-tertiary": "#ffffff", "primary": "#0037b1", "on-error": "#ffffff", "surface-container-high": "#dce9ff", "on-primary": "#ffffff", "on-tertiary-fixed": "#002114", "inverse-on-surface": "#eaf1ff", "inverse-surface": "#213145", "outline-variant": "#c4c5d7", "surface-container": "#e5eeff", "surface-tint": "#2251da", "primary-fixed": "#dce1ff", "on-primary-container": "#ccd4ff", "tertiary-container": "#006a49", "tertiary": "#004f36", "secondary-container": "#dae2fd", "outline": "#747686", "on-surface-variant": "#434655", "surface-variant": "#d3e4fe", "inverse-primary": "#b7c4ff", "surface": "#f8f9ff", "secondary-fixed-dim": "#bec6e0", "surface-container-low": "#eff4ff", "on-secondary": "#ffffff", "surface-container-highest": "#d3e4fe", "on-tertiary-container": "#78ebb7", "surface-bright": "#f8f9ff", "background": "#f8f9ff" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "margin": "2rem", "space-lg": "1.25rem", "space-md": "0.75rem", "gutter-sm": "0.75rem", "margin-sm": "1rem", "space-sm": "0.5rem", "gutter": "1.25rem", "space-xs": "0.25rem", "space-xl": "2rem" }, "fontFamily": { "headline-lg": ["Inter"], "body-lg": ["Inter"], "body-md": ["Inter"], "headline-xl": ["Inter"], "headline-xl-mobile": ["Inter"], "label-sm": ["Inter"], "headline-sm": ["Inter"], "headline-md": ["Inter"], "label-md": ["Inter"], "body-sm": ["Inter"] }, "fontSize": { "headline-lg": ["24px", {"lineHeight": "32px", "letterSpacing": "-0.02em", "fontWeight": "600"}], "body-lg": ["16px", {"lineHeight": "24px", "fontWeight": "400"}], "body-md": ["14px", {"lineHeight": "20px", "fontWeight": "400"}], "headline-xl": ["36px", {"lineHeight": "44px", "letterSpacing": "-0.025em", "fontWeight": "700"}], "headline-xl-mobile": ["28px", {"lineHeight": "34px", "letterSpacing": "-0.02em", "fontWeight": "700"}], "label-sm": ["11px", {"lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "600"}], "headline-sm": ["16px", {"lineHeight": "24px", "letterSpacing": "-0.01em", "fontWeight": "600"}], "headline-md": ["20px", {"lineHeight": "28px", "letterSpacing": "-0.015em", "fontWeight": "600"}], "label-md": ["13px", {"lineHeight": "18px", "letterSpacing": "-0.005em", "fontWeight": "500"}], "body-sm": ["13px", {"lineHeight": "18px", "fontWeight": "400"}] } } } }</script></head><body class="bg-surface font-body-md text-on-surface antialiased min-h-screen flex flex-col"><header class="fixed top-0 left-0 right-0 z-50 bg-surface-container-lowest border-b border-outline-variant/30 shadow-[0_1px_4px_rgba(15,23,42,0.04)]"><div class="h-16 w-full px-margin flex items-center justify-between gap-space-lg"><div class="flex items-center gap-space-xl"><div class="flex items-center gap-space-sm"><img alt="EduSync Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1XtPC0NmVKBnSVaF78gzeE2rjiQ7tCBTh_m-dXW-YmUVfxWoFinfYP4Kg--HuX84g6zTZvS0Puob6_deKJ5zz4gtTA0pCWWY4WV1l4qURZ0uwyntmnCt6F4K-w0yQlJBSq8SgD6bS6XveOuV__fE_6ReJprX893aUQuIWFklTbVniY0iJtzI7r4zoLyGxa-7t_ksyCP6Lgkvpeh_QfRuMNVg8v3cOT4z_bwNyhI2fBK2SqzSEwe5GKi_51m"/><span class="font-headline-sm text-headline-sm text-primary font-bold tracking-tight">EduSync</span></div><nav class="hidden lg:flex items-center gap-space-md h-16" data-active-classes="text-primary font-semibold border-b-2 border-primary"><a class="h-full flex items-center px-space-sm font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="kalender" href="#">Kalender</a><a class="h-full flex items-center px-space-sm font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="tugas-saya" href="#">Tugas Saya</a><a class="h-full flex items-center gap-space-xs px-space-sm font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="kelola-kuliah-pengganti" href="#">Kelola Kuliah Pengganti<span class="px-1.5 py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm font-semibold">Komti</span></a><a class="h-full flex items-center px-space-sm font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="bantuan" href="#">Bantuan</a></nav></div><div class="flex items-center gap-space-md"><div class="hidden sm:flex items-center gap-1.5 px-space-sm py-1 rounded-full bg-surface-container-low border border-outline-variant/50 text-on-surface-variant font-label-sm text-label-sm"><span class="material-symbols-outlined text-[16px] text-primary">school</span><span>TI-J 2024 · Sem 5</span></div><button aria-label="Notifikasi" class="relative p-2 rounded-lg text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors focus:outline-none focus:ring-2 focus:ring-primary" type="button"><span class="material-symbols-outlined">notifications</span><span class="absolute -top-1 -right-2 px-1.5 py-0.5 rounded-full bg-primary text-on-primary font-label-sm text-[10px] leading-tight font-semibold shadow-sm">1 Pengganti</span></button><div class="h-8 w-px bg-outline-variant/40 mx-space-xs hidden md:block"></div><div class="flex items-center gap-space-sm pl-space-xs"><div class="text-right hidden md:block"><div class="font-label-md text-label-md font-semibold text-on-surface leading-tight">Arya Pratama</div><div class="font-label-sm text-label-sm text-on-surface-variant leading-tight flex items-center justify-end gap-1"><span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span><span>Komti</span></div></div><img alt="Profile" class="w-8 h-8 rounded-full object-cover ring-1 ring-outline-variant/40" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDq9Gmx1diTpSs-cZ5eaOOrRtpquFpGw97kwyF5_MBGYD7D4AN3P6VLhg2t4Bqnx7oJu5JlfsW6OOJ9hewvIfUWi-9asSQMljs1sIyD3XrVHHBtmzkJ0NG__Mst-jak3_xtX44ozUA3dga_E5_3y08o6-qtS8fgdbcVHbZvhnFg2VtLMS4f4l79BOs7ZH6TOm6W8cvc-rxQTPpemJuirr82jKHkjZeFzlqr8LtgqiD1_Q8C_FmKmCP9tg"/></div></div></div></header><main class="w-full pt-16 bg-surface flex-1"><div class="flex flex-col w-full">
+<div class="w-full max-w-[1280px] mx-auto px-margin-sm md:px-margin py-6">
+<!-- Top Utility & Navigation Header -->
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-4 pb-6 border-b border-outline-variant/30">
+<div class="space-y-1">
+<div class="flex items-center gap-2">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm tracking-wider uppercase font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-primary animate-pulse"></span>
+            Portal Komti · Kelola Jadwal Kelas TI-J 2024
+          </span>
+<span class="text-on-surface-variant font-label-sm text-label-sm hidden sm:inline">•</span>
+<span class="text-on-surface-variant font-label-sm text-label-sm hidden sm:inline">Semester Ganjil 2024/2025</span>
+</div>
+<h1 class="font-headline-lg text-headline-lg font-bold text-on-surface tracking-tight">
+          Kelola Kuliah Pengganti
+        </h1>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-2xl">
+          Atur perpindahan jadwal atau sesi tambahan kuliah tanpa mengacaukan jadwal rutin semester. Seluruh mahasiswa kelas akan mendapatkan notifikasi instan.
+        </p>
+</div>
+<div class="flex flex-wrap items-center gap-3 shrink-0">
+<div class="flex items-center gap-2 px-3 py-1.5 rounded-lg bg-surface-container border border-outline-variant/40 shadow-sm">
+<span class="material-symbols-outlined text-[18px] text-primary" style="font-variation-settings: 'FILL' 1;">sync_alt</span>
+<span class="font-label-md text-label-md text-on-surface font-medium">Status: <strong class="text-primary font-semibold">1 Pengganti Aktif</strong> Minggu Ini</span>
+</div>
+<button class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-surface-container-lowest text-on-surface border border-outline-variant/50 hover:bg-surface-container-low transition-colors shadow-sm font-label-md text-label-md" type="button">
+<span class="material-symbols-outlined text-[18px] text-on-surface-variant">history</span>
+<span>Lihat Riwayat Perubahan</span>
+</button>
+</div>
+</div>
+<!-- Main Content Asymmetric 2-Column Grid -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter mt-6">
+<!-- Left Column: Replacement Class Form Card (approx 58% ~ 7 cols) -->
+<section class="lg:col-span-7 flex flex-col gap-6">
+<div class="bg-surface-container-lowest rounded-xl border border-outline-variant/40 p-6 md:p-8 shadow-sm">
+<!-- Card Sub-header -->
+<div class="pb-5 border-b border-surface-container-low mb-6">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2.5">
+<div class="w-8 h-8 rounded-lg bg-primary-fixed flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[20px]">edit_calendar</span>
+</div>
+<h2 class="font-headline-sm text-headline-sm font-semibold text-on-surface">
+                  Formulir Penjadwalan Kuliah Pengganti
+                </h2>
+</div>
+<span class="font-label-sm text-label-sm text-error font-medium">* Wajib diisi</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1.5 pl-10">
+              Lengkapi informasi jadwal baru yang telah disepakati bersama dosen pengampu dan perwakilan kelas.
+            </p>
+</div>
+<form class="space-y-5" id="replacement-form">
+<!-- Field 1: Course Selection -->
+<div class="space-y-1.5">
+<label class="block font-label-md text-label-md font-semibold text-on-surface" for="course-select">
+                Mata Kuliah <span class="text-error">*</span>
+</label>
+<div class="relative">
+<select class="w-full h-10 px-3 pr-10 rounded-lg bg-surface-container-lowest border border-outline-variant text-on-surface font-body-md text-body-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary transition-all appearance-none cursor-pointer" id="course-select">
+<option selected="" value="TI301">Jaringan Komputer (TI-301) · 3 SKS — Dosen: Taufik Hidayat, S.Kom., M.Cs.</option>
+<option value="TI302">Rekayasa Perangkat Lunak (TI-302) · 3 SKS — Dosen: Dr. Sari Wijaya, M.T.</option>
+<option value="TI305">Sistem Terdistribusi (TI-305) · 3 SKS — Dosen: Ahmad Fauzi, Ph.D.</option>
+<option value="TI308">Keamanan Siber &amp; Kriptografi (TI-308) · 2 SKS — Dosen: Ir. Budi Rahardjo</option>
+</select>
+<div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-3 text-on-surface-variant">
+<span class="material-symbols-outlined text-[20px]">expand_more</span>
+</div>
+</div>
+<!-- Read-only Info Callout: Auto-detected original schedule -->
+<div class="mt-2.5 flex items-start gap-2.5 p-3 rounded-lg bg-surface-container-low border border-primary/20 text-on-surface">
+<span class="material-symbols-outlined text-[18px] text-primary shrink-0 mt-0.5" style="font-variation-settings: 'FILL' 1;">lock</span>
+<div class="font-body-sm text-body-sm leading-relaxed">
+<span class="font-semibold text-primary">Jadwal semula terdeteksi:</span>
+<span class="font-medium text-on-surface"> Rabu, 09:40 – 12:10 WIB · Ruang R.204</span>
+<span class="inline-block ml-1 px-1.5 py-0.2 rounded bg-surface-container-high text-on-surface-variant font-label-sm text-[10px] uppercase font-semibold">Tersinkron SIAKAD</span>
+</div>
+</div>
+</div>
+<!-- Grid 2-col: Date & Room -->
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-1">
+<!-- Tanggal Baru -->
+<div class="space-y-1.5">
+<label class="block font-label-md text-label-md font-semibold text-on-surface" for="new-date">
+                  Tanggal Baru <span class="text-error">*</span>
+</label>
+<div class="relative">
+<input class="w-full h-10 pl-10 pr-3 rounded-lg bg-surface-container-lowest border border-outline-variant text-on-surface font-body-md text-body-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary transition-all" id="new-date" type="text" value="Kamis, 8 Okt 2026"/>
+<span class="material-symbols-outlined absolute left-3 top-2.5 text-[20px] text-on-surface-variant pointer-events-none">calendar_today</span>
+</div>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Pilih hari pengganti dalam pekan yang sama</p>
+</div>
+<!-- Ruang Baru -->
+<div class="space-y-1.5">
+<label class="block font-label-md text-label-md font-semibold text-on-surface" for="new-room">
+                  Ruang Baru <span class="text-error">*</span>
+</label>
+<div class="relative">
+<input class="w-full h-10 pl-10 pr-3 rounded-lg bg-surface-container-lowest border border-outline-variant text-on-surface font-body-md text-body-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary transition-all" id="new-room" type="text" value="Lab 3 (Gedung TI Lt. 2)"/>
+<span class="material-symbols-outlined absolute left-3 top-2.5 text-[20px] text-on-surface-variant pointer-events-none">meeting_room</span>
+</div>
+<div class="flex items-center gap-1 font-label-sm text-label-sm text-tertiary">
+<span class="material-symbols-outlined text-[14px]">check_circle</span>
+<span>Tersedia (Bebas bentrok jadwal)</span>
+</div>
+</div>
+</div>
+<!-- Grid 2-col: Time Range & Duration -->
+<div class="p-4 rounded-xl bg-surface-container-low/70 border border-outline-variant/30 space-y-3">
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+<div class="space-y-1.5">
+<label class="block font-label-md text-label-md font-semibold text-on-surface" for="start-time">
+                    Jam Mulai <span class="text-error">*</span>
+</label>
+<div class="relative">
+<input class="w-full h-10 px-3 pr-10 rounded-lg bg-surface-container-lowest border border-outline-variant text-on-surface font-body-md text-body-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary" id="start-time" type="time" value="13:00"/>
+<span class="absolute right-3 top-2.5 font-label-sm text-label-sm text-on-surface-variant font-semibold pointer-events-none">WIB</span>
+</div>
+</div>
+<div class="space-y-1.5">
+<label class="block font-label-md text-label-md font-semibold text-on-surface" for="end-time">
+                    Jam Selesai <span class="text-error">*</span>
+</label>
+<div class="relative">
+<input class="w-full h-10 px-3 pr-10 rounded-lg bg-surface-container-lowest border border-outline-variant text-on-surface font-body-md text-body-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary" id="end-time" type="time" value="14:40"/>
+<span class="absolute right-3 top-2.5 font-label-sm text-label-sm text-on-surface-variant font-semibold pointer-events-none">WIB</span>
+</div>
+</div>
+</div>
+<!-- Duration Calculation Pill -->
+<div class="flex flex-wrap items-center justify-between gap-2 pt-1 border-t border-outline-variant/30">
+<div class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm font-semibold">
+<span class="material-symbols-outlined text-[16px]">timelapse</span>
+<span>Durasi: 100 Menit (2 SKS Praktikum / Responsi)</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Slot istirahat terakomodasi</span>
+</div>
+</div>
+<!-- Field 4: Reason -->
+<div class="space-y-1.5">
+<div class="flex items-center justify-between">
+<label class="block font-label-md text-label-md font-semibold text-on-surface" for="change-reason">
+                  Alasan Perubahan Jadwal <span class="text-error">*</span>
+</label>
+<span class="font-label-sm text-label-sm text-on-surface-variant" id="char-counter">142/300 karakter</span>
+</div>
+<textarea class="w-full p-3 rounded-lg bg-surface-container-lowest border border-outline-variant text-on-surface font-body-md text-body-md leading-relaxed focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary resize-none transition-all" id="change-reason" maxlength="300" rows="3">Dosen pengampu ada tugas dinas workshop kurikulum nasional pada hari Rabu pagi. Sesi praktikum digeser ke hari Kamis siang di laboratorium komputer.</textarea>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                Maksimal 300 karakter. Alasan ini akan tampil pada kartu jadwal mahasiswa dan notifikasi ringkasan.
+              </p>
+</div>
+<!-- Notification Broadcast Option -->
+<div class="p-3.5 rounded-lg border border-outline-variant/50 bg-surface-container-low/40">
+<label class="flex items-start gap-3 cursor-pointer select-none">
+<input checked="" class="mt-1 h-4 w-4 rounded border-outline-variant text-primary focus:ring-primary focus:ring-offset-0 transition-all" type="checkbox"/>
+<div class="space-y-0.5">
+<div class="font-label-md text-label-md font-semibold text-on-surface flex items-center gap-1.5">
+<span>Kirim notifikasi broadcast ke bot Telegram &amp; grup WhatsApp kelas</span>
+<span class="px-1.5 py-0.2 rounded bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-[10px] font-bold">Rekomendasi</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                    Sistem EduSync akan langsung mengirimkan format kalender (.ics) dan ringkasan jadwal ke saluran resmi kelas TI-J.
+                  </p>
+</div>
+</label>
+</div>
+<!-- Action Buttons Footer -->
+<div class="flex flex-col sm:flex-row items-center justify-end gap-3 pt-4 border-t border-surface-container-low">
+<button class="w-full sm:w-auto px-5 h-10 rounded-lg border border-outline-variant/60 text-on-surface hover:bg-surface-container-low font-label-md text-label-md font-semibold transition-colors" type="button">
+                Batal
+              </button>
+<button class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 h-10 rounded-lg bg-primary-container hover:bg-primary text-on-primary font-label-md text-label-md font-semibold shadow-sm transition-all focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2" id="btn-publish" type="button">
+<span class="material-symbols-outlined text-[18px]">send</span>
+<span>Publikasikan Kuliah Pengganti</span>
+</button>
+</div>
+</form>
+</div>
+<!-- Instructor Confirmation Badge -->
+<div class="flex items-center gap-3 p-4 rounded-xl bg-surface-container-lowest border border-outline-variant/30 shadow-sm">
+<div class="w-10 h-10 rounded-full bg-tertiary/10 text-tertiary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[22px]">verified</span>
+</div>
+<div class="space-y-0.5">
+<div class="font-label-md text-label-md font-semibold text-on-surface">Persetujuan Dosen Pengampu Terkonfirmasi</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Taufik Hidayat, S.Kom., M.Cs. telah menyetujui slot via SIAKAD Mobile pada 06 Okt 2026, 14:15 WIB.
+            </p>
+</div>
+</div>
+</section>
+<!-- Right Column: Live Calendar Preview & Impact Details (~42% ~ 5 cols) -->
+<section class="lg:col-span-5 flex flex-col gap-6">
+<!-- Live Calendar Preview Card -->
+<div class="bg-surface-container-lowest rounded-xl border border-outline-variant/40 p-5 md:p-6 shadow-sm space-y-4">
+<div class="flex items-start justify-between gap-2 border-b border-surface-container-low pb-3">
+<div>
+<h3 class="font-headline-sm text-headline-sm font-semibold text-on-surface flex items-center gap-2">
+<span>Pratinjau di Kalender</span>
+<span class="material-symbols-outlined text-[18px] text-primary">visibility</span>
+</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">
+                Simulasi visual kalender 36 mahasiswa setelah jadwal diterbitkan.
+              </p>
+</div>
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm font-semibold shrink-0">
+<span class="w-1.5 h-1.5 rounded-full bg-primary animate-ping"></span>
+              Live Preview
+            </span>
+</div>
+<!-- Interactive Calendar Simulation Matrix -->
+<div class="rounded-xl bg-surface border border-outline-variant/40 p-3 space-y-3">
+<!-- Calendar Header Bar -->
+<div class="flex items-center justify-between px-1 py-0.5 text-on-surface">
+<div class="font-label-md text-label-md font-bold tracking-tight flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-primary">date_range</span>
+<span>Pekan Ke-6 · Oktober 2026</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Kelas TI-J</span>
+</div>
+<!-- Two-day column preview -->
+<div class="grid grid-cols-2 gap-2.5">
+<!-- Column 1: Rabu, 7 Okt (Old slot removed) -->
+<div class="rounded-lg bg-surface-container-lowest p-2.5 border border-outline-variant/30 flex flex-col gap-2 min-h-[220px]">
+<div class="text-center pb-1.5 border-b border-outline-variant/20">
+<div class="font-label-sm text-label-sm text-on-surface-variant uppercase font-semibold">Rabu</div>
+<div class="font-headline-sm text-headline-sm font-bold text-on-surface">7 Okt</div>
+</div>
+<!-- 08:00 - 09:40 Active other class -->
+<div class="p-2 rounded bg-surface-container-low text-on-surface text-[11px] leading-tight border-l-2 border-secondary font-medium">
+<div class="font-semibold truncate">Matematika Diskrit</div>
+<div class="text-on-surface-variant text-[10px]">08:00 - 09:40 · R.101</div>
+</div>
+<!-- 09:40 - 12:10 Old Strikethrough Slot -->
+<div class="p-2.5 rounded-lg border-2 border-dashed border-outline-variant/70 bg-surface-container-low/40 flex flex-col justify-between flex-1 relative overflow-hidden">
+<div class="space-y-1">
+<div class="inline-flex items-center gap-1 px-1.5 py-0.2 rounded bg-error-container text-on-error-container font-label-sm text-[10px] font-bold">
+<span class="material-symbols-outlined text-[12px]">event_busy</span>
+<span>DIBATALKAN</span>
+</div>
+<div class="font-label-sm text-label-sm font-semibold line-through text-outline">
+                      09:40 Jaringan Komputer
+                    </div>
+<div class="text-[11px] text-outline font-body-sm line-through">
+                      R.204 · 3 SKS
+                    </div>
+</div>
+<div class="pt-2 border-t border-outline-variant/30 text-[10px] text-primary font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px]">arrow_forward</span>
+<span>Pindah ke Kamis 13:00</span>
+</div>
+</div>
+</div>
+<!-- Column 2: Kamis, 8 Okt (New slot inserted) -->
+<div class="rounded-lg bg-surface-container-lowest p-2.5 border border-primary/30 flex flex-col gap-2 min-h-[220px] ring-1 ring-primary/20">
+<div class="text-center pb-1.5 border-b border-primary/20 bg-primary-fixed/20 rounded-t">
+<div class="font-label-sm text-label-sm text-primary uppercase font-bold">Kamis</div>
+<div class="font-headline-sm text-headline-sm font-bold text-primary">8 Okt</div>
+</div>
+<!-- Morning free slot indicator -->
+<div class="py-1 px-2 rounded border border-dashed border-outline-variant/30 text-center font-label-sm text-[10px] text-on-surface-variant">
+                  Pagi: Mandiri / Tugas
+                </div>
+<!-- 13:00 - 14:40 THE REPLACEMENT CLASS BADGE -->
+<div class="p-2.5 rounded-lg border-2 border-dashed border-primary-container bg-surface-container-low flex flex-col justify-between flex-1 relative shadow-sm">
+<div class="space-y-1.5">
+<div class="flex items-center justify-between">
+<span class="inline-flex items-center gap-1 px-1.5 py-0.5 rounded bg-primary text-on-primary font-label-sm text-[10px] font-bold tracking-wide">
+<span class="material-symbols-outlined text-[12px]">sync_alt</span>
+                        PENGGANTI
+                      </span>
+<span class="font-label-sm text-[10px] font-bold text-primary">13:00 – 14:40</span>
+</div>
+<div>
+<div class="font-label-md text-label-md font-bold text-on-surface leading-snug">
+                        Jaringan Komputer
+                      </div>
+<div class="flex items-center gap-1 text-[11px] font-medium text-primary mt-0.5">
+<span class="material-symbols-outlined text-[14px]">meeting_room</span>
+<span>Lab 3 (Gedung TI)</span>
+</div>
+</div>
+</div>
+<div class="mt-2 pt-1.5 border-t border-primary/15 text-[10px] text-on-surface-variant leading-tight">
+<span class="text-outline font-medium">Semula:</span> Rabu 09:40 · R.204
+                  </div>
+</div>
+</div>
+</div>
+<!-- Mini Legend Footer -->
+<div class="flex items-center justify-between px-2 pt-1 font-label-sm text-[11px] text-on-surface-variant">
+<span class="flex items-center gap-1.5">
+<span class="w-2.5 h-2.5 rounded-sm border border-dashed border-primary bg-surface-container-low"></span>
+<span>Jadwal Pengganti</span>
+</span>
+<span class="flex items-center gap-1.5">
+<span class="w-2.5 h-2.5 rounded-sm border border-dashed border-outline-variant bg-surface-container-low/40"></span>
+<span>Slot Asal Kosong</span>
+</span>
+</div>
+</div>
+</div>
+<!-- Key Impact & Rules Card -->
+<div class="bg-surface-container-lowest rounded-xl border border-outline-variant/40 p-5 md:p-6 shadow-sm space-y-4">
+<div class="flex items-center gap-2 text-on-surface">
+<span class="material-symbols-outlined text-[20px] text-primary" style="font-variation-settings: 'FILL' 1;">info</span>
+<h4 class="font-headline-sm text-headline-sm font-semibold">Dampak &amp; Ketentuan Sistem</h4>
+</div>
+<ul class="space-y-3 font-body-sm text-body-sm text-on-surface">
+<li class="flex items-start gap-2.5">
+<span class="w-5 h-5 rounded-full bg-surface-container flex items-center justify-center shrink-0 mt-0.5 text-primary font-bold font-label-sm text-[11px]">1</span>
+<span><strong>Slot semula tertimpa hanya pada tanggal tersebut (Rabu, 7 Okt 2026).</strong> Jadwal kelas lain di hari yang sama tetap berlangsung normal.</span>
+</li>
+<li class="flex items-start gap-2.5">
+<span class="w-5 h-5 rounded-full bg-surface-container flex items-center justify-center shrink-0 mt-0.5 text-primary font-bold font-label-sm text-[11px]">2</span>
+<span><strong>Jadwal rutin mingguan tidak berubah</strong> untuk minggu-minggu berikutnya (kembali normal ke hari Rabu).</span>
+</li>
+<li class="flex items-start gap-2.5">
+<span class="w-5 h-5 rounded-full bg-surface-container flex items-center justify-center shrink-0 mt-0.5 text-primary font-bold font-label-sm text-[11px]">3</span>
+<span><strong>Presensi digital otomatis dialihkan</strong> ke GPS Lab 3 dengan batas toleransi absensi 15 menit dari pukul 13:00 WIB.</span>
+</li>
+</ul>
+<!-- Quick WhatsApp / Telegram Format Snippet -->
+<div class="mt-4 pt-4 border-t border-surface-container-low space-y-2">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md font-semibold text-on-surface flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-tertiary">chat</span>
+                Format Pengumuman WhatsApp
+              </span>
+<button class="text-primary hover:text-on-primary-fixed-variant font-label-sm text-label-sm font-semibold flex items-center gap-1 transition-colors" id="copy-btn" onclick="navigator.clipboard.writeText(document.getElementById('wa-text').innerText); this.innerText='Tersalin!'; setTimeout(()=&gt;this.innerText='Salin Teks', 2000)" type="button">
+<span class="material-symbols-outlined text-[14px]">content_copy</span>
+<span>Salin Teks</span>
+</button>
+</div>
+<div class="p-3 rounded-lg bg-surface-container-low border border-outline-variant/30 font-body-sm text-body-sm font-mono text-on-surface-variant select-all whitespace-pre-wrap leading-relaxed" id="wa-text">[KULIAH PENGGANTI] Mata Kuliah: Jaringan Komputer (TI-301) resmi digeser ke Kamis, 8 Okt 2026 pukul 13:00 – 14:40 WIB di Lab 3 (Gedung TI Lt. 2). Alasan: Dosen penugasan workshop. Harap hadir tepat waktu. — Komti TI-J</div>
+</div>
+</div>
+</section>
+</div>
+</div>
+</div>
+<script>
+  // Simple interactive updates between Form and Live Preview
+  const courseSelect = document.getElementById('course-select');
+  const reasonTextarea = document.getElementById('change-reason');
+  const charCounter = document.getElementById('char-counter');
+  const publishBtn = document.getElementById('btn-publish');
+
+  // Realtime Character Counter
+  if (reasonTextarea && charCounter) {
+    reasonTextarea.addEventListener('input', (e) => {
+      const len = e.target.value.length;
+      charCounter.textContent = `${len}/300 karakter`;
+      if (len >= 280) {
+        charCounter.classList.add('text-error');
+      } else {
+        charCounter.classList.remove('text-error');
+      }
+    });
+  }
+
+  // Feedback on submit click
+  if (publishBtn) {
+    publishBtn.addEventListener('click', () => {
+      const originalText = publishBtn.innerHTML;
+      publishBtn.disabled = true;
+      publishBtn.innerHTML = `
+        <span class="material-symbols-outlined text-[18px] animate-spin">progress_activity</span>
+        <span>Menyinkronkan...</span>
+      `;
+      setTimeout(() => {
+        publishBtn.innerHTML = `
+          <span class="material-symbols-outlined text-[18px]">check_circle</span>
+          <span>Berhasil Diterbitkan!</span>
+        `;
+        publishBtn.classList.remove('bg-primary-container', 'hover:bg-primary');
+        publishBtn.classList.add('bg-tertiary', 'text-on-tertiary');
+        setTimeout(() => {
+          publishBtn.innerHTML = originalText;
+          publishBtn.classList.remove('bg-tertiary', 'text-on-tertiary');
+          publishBtn.classList.add('bg-primary-container', 'hover:bg-primary');
+          publishBtn.disabled = false;
+        }, 2500);
+      }, 900);
+    });
+  }
+</script></main><footer class="w-full bg-surface-container-lowest border-t border-outline-variant/30 py-space-md"><div class="w-full px-margin flex flex-col sm:flex-row items-center justify-between gap-space-sm font-body-sm text-body-sm text-on-surface-variant"><div class="flex items-center gap-space-sm"><span class="font-semibold text-on-surface">EduSync</span><span>•</span><span>Sistem Informasi Jadwal Kuliah &amp; Pelacak Tugas</span></div><div class="flex items-center gap-space-md"><span>Program Studi Teknik Informatika</span><span>•</span><span>Tahun Akademik 2024/2025</span></div></div></footer></body></html>
