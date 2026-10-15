@@ -11,4 +11,4 @@ Nama: Muhammad Raihandhika Yogaraksa · NIM: 24051130045 · Kelas: TI-J 2024
 4. **Bagaimana design token membantu?**
    Saat uji ditemukan satu warna yang tertulis langsung (#E6F4EA). Karena semua nilai lain lewat token, cukup menambah `--color-success-bg` dan semua pemakaiannya ikut konsisten. Cara ini juga memudahkan orang lain membaca dan mengubah gaya.
 5. **Apa kontribusi Anda dan bukti commit atau artefaknya?**
-   Mengerjakan seluruh Pertemuan 4 secara individu: token, struktur proyek, komponen, enam halaman, uji, dan dokumentasi. Bukti: branch `feature/ui-pertemuan-4`, commit-commit pada README, hash commit: ……………
+   Mengerjakan seluruh Pertemuan 4 secara individu: token, struktur proyek, komponen, enam halaman, uji, dan dokumentasi. Bukti: branch `feature/ui-pertemuan-4`, commit-commit pada README, hash commit: hash commit: 5af9c3e (kode) dan e7f0ea6 (dokumentasi)

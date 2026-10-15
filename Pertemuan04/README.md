@@ -42,7 +42,7 @@ Primary `#1F4FD8` · teks `#1C2230` · surface `#FFFFFF` · bg `#F6F7FB` · succ
 ## Kontribusi
 | Nama | Bagian pekerjaan | Tautan commit |
 |---|---|---|
-| Muhammad Raihandhika Yogaraksa | Seluruh pekerjaan Pertemuan 4 | <ISI TAUTAN COMMIT> |
+| Muhammad Raihandhika Yogaraksa | Seluruh pekerjaan Pertemuan 4 | [5af9c3e](https://github.com/yogaraksa/praktik-aplikasi-web/commit/5af9c3e) (kode), [e7f0ea6](https://github.com/yogaraksa/praktik-aplikasi-web/commit/e7f0ea6) (dokumentasi) |
 
 ## Langkah Git
 ```

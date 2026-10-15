@@ -14,7 +14,7 @@ Cara uji: otomatis dengan Chromium (Playwright) pada 1280 × 800 dan 390 × 844 
 | 7 | Tombol dan field memiliki label yang jelas | Sudah | Setiap field memiliki `<label for>`; tombol berupa kata kerja |
 | 8 | Kontras teks dan latar dapat dibaca | Sudah | Semua pasangan token ≥ 4,5 : 1 (lihat `01-design-tokens.md`) |
 | 9 | Kode komponen tidak diduplikasi tanpa alasan | Sudah | Satu `UI.field`, satu `UI.classCard`; halaman hanya merangkai komponen; seluruh state tampil di `pages/komponen.html` |
-| 10 | Perubahan sudah di-commit dan didorong ke repositori | Belum | Isi menjadi "Sudah" setelah `git push` |
+| 10 | Perubahan sudah di-commit dan didorong ke repositori | Branch feature/ui-pertemuan-4 di-push; commit 5af9c3e dan e7f0ea6 | Isi menjadi "Sudah" setelah `git push` |
 
 ## Pemeriksaan acceptance criteria Pertemuan 3
 | User story | Kriteria | Hasil |
