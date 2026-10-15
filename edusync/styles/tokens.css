@@ -1,0 +1,12 @@
+/* Design tokens EduSync – rujukan tunggal untuk warna, tipografi, jarak, radius */
+:root{
+  --color-primary:#1f4fd8; --color-primary-soft:#e6edff; --color-on-primary:#fff;
+  --color-text:#1c2230; --color-muted:#5d6678; --color-bg:#f6f7fb; --color-surface:#fff; --color-border:#d5d9e4;
+  --color-success:#1e7e34; --color-success-bg:#e6f4ea; --color-warning:#b54708; --color-warning-bg:#fff7e6; --color-danger:#b42318; --color-danger-bg:#fdecea;
+  --font-sans:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  --fs-h1:1.75rem; --fs-h2:1.25rem; --fs-h3:1rem; --fs-body:.9375rem; --fs-label:.8125rem; --fs-caption:.75rem;
+  --sp-1:4px; --sp-2:8px; --sp-3:12px; --sp-4:16px; --sp-6:24px; --sp-8:32px;
+  --radius-sm:6px; --radius-md:8px; --radius-lg:12px; --radius-pill:999px;
+  --shadow-card:0 1px 2px rgba(20,30,60,.08); --tap:44px; --container:1180px;
+}
+@media (max-width:640px){:root{--fs-h1:1.4rem}}
